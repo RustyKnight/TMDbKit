@@ -1,0 +1,3 @@
+github "RustyKnight/Hydra" "v1.6.0"
+github "RustyKnight/HydraKit" "c3f5c339c7dc5e38c3f894771ee165b5919b154f"
+github "RustyKnight/SimpleLogger" "v0.0.5"
