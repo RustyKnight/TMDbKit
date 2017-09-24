@@ -8,7 +8,7 @@
 
 import Foundation
 import XCTest
-import TMDb
+import TMDbKit
 
 class TMDbTests: XCTestCase {
     func testExample() {

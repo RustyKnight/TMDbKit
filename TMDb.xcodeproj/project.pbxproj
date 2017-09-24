@@ -8,11 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1267DBD91F7474320003D4F9 /* HydraKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1267DBD51F7474320003D4F9 /* HydraKit.framework */; };
-		1267DBDA1F7474320003D4F9 /* KZSimpleLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1267DBD61F7474320003D4F9 /* KZSimpleLogger.framework */; };
 		1267DBDB1F7474320003D4F9 /* Hydra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1267DBD71F7474320003D4F9 /* Hydra.framework */; };
 		1267DBDF1F7474440003D4F9 /* HydraKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1267DBDC1F7474440003D4F9 /* HydraKit.framework */; };
 		1267DBE01F7474440003D4F9 /* Hydra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1267DBDD1F7474440003D4F9 /* Hydra.framework */; };
-		1267DBE11F7474440003D4F9 /* KZSimpleLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1267DBDE1F7474440003D4F9 /* KZSimpleLogger.framework */; };
 		1267DBE51F74745D0003D4F9 /* HydraKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1267DBE21F74745D0003D4F9 /* HydraKit.framework */; };
 		1267DBE61F74745D0003D4F9 /* Hydra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1267DBE31F74745D0003D4F9 /* Hydra.framework */; };
 		1267DBEA1F7474710003D4F9 /* Hydra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1267DBE81F7474710003D4F9 /* Hydra.framework */; };
@@ -44,6 +42,60 @@
 		1267DC1A1F7482440003D4F9 /* Searches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC191F7482440003D4F9 /* Searches.swift */; };
 		1267DC1C1F7482AE0003D4F9 /* Timezones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC1B1F7482AE0003D4F9 /* Timezones.swift */; };
 		52D6D9871BEFF229002C0205 /* TMDbKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6D97C1BEFF229002C0205 /* TMDbKit.framework */; };
+		700A40A31F774DCB003BBBB3 /* SimpleLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 700A40A21F774DCB003BBBB3 /* SimpleLogger.framework */; };
+		700A40A51F774DD3003BBBB3 /* SimpleLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 700A40A41F774DD3003BBBB3 /* SimpleLogger.framework */; };
+		700A40A71F774DDB003BBBB3 /* SimpleLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 700A40A61F774DDB003BBBB3 /* SimpleLogger.framework */; };
+		700A40A91F774DE2003BBBB3 /* SimpleLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 700A40A81F774DE1003BBBB3 /* SimpleLogger.framework */; };
+		700A40AA1F774E25003BBBB3 /* Companies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DBFC1F747BAE0003D4F9 /* Companies.swift */; };
+		700A40AB1F774E25003BBBB3 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DBFE1F747BEE0003D4F9 /* Configuration.swift */; };
+		700A40AC1F774E25003BBBB3 /* Credits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC001F747CD50003D4F9 /* Credits.swift */; };
+		700A40AD1F774E25003BBBB3 /* Discover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC021F747CF80003D4F9 /* Discover.swift */; };
+		700A40AE1F774E25003BBBB3 /* Find.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC041F747D700003D4F9 /* Find.swift */; };
+		700A40AF1F774E25003BBBB3 /* Genres.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC061F747D950003D4F9 /* Genres.swift */; };
+		700A40B01F774E25003BBBB3 /* Jobs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC081F747E600003D4F9 /* Jobs.swift */; };
+		700A40B11F774E25003BBBB3 /* Keywords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC0A1F747EDB0003D4F9 /* Keywords.swift */; };
+		700A40B21F774E25003BBBB3 /* Lists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC0C1F74804C0003D4F9 /* Lists.swift */; };
+		700A40B31F774E25003BBBB3 /* Networks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC131F7481940003D4F9 /* Networks.swift */; };
+		700A40B41F774E25003BBBB3 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC151F7481B10003D4F9 /* People.swift */; };
+		700A40B51F774E25003BBBB3 /* Reviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC171F74822E0003D4F9 /* Reviews.swift */; };
+		700A40B61F774E25003BBBB3 /* Searches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC191F7482440003D4F9 /* Searches.swift */; };
+		700A40B71F774E25003BBBB3 /* Timezones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC1B1F7482AE0003D4F9 /* Timezones.swift */; };
+		700A40B81F774E25003BBBB3 /* Companies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DBFC1F747BAE0003D4F9 /* Companies.swift */; };
+		700A40B91F774E25003BBBB3 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DBFE1F747BEE0003D4F9 /* Configuration.swift */; };
+		700A40BA1F774E25003BBBB3 /* Credits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC001F747CD50003D4F9 /* Credits.swift */; };
+		700A40BB1F774E25003BBBB3 /* Discover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC021F747CF80003D4F9 /* Discover.swift */; };
+		700A40BC1F774E25003BBBB3 /* Find.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC041F747D700003D4F9 /* Find.swift */; };
+		700A40BD1F774E25003BBBB3 /* Genres.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC061F747D950003D4F9 /* Genres.swift */; };
+		700A40BE1F774E25003BBBB3 /* Jobs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC081F747E600003D4F9 /* Jobs.swift */; };
+		700A40BF1F774E25003BBBB3 /* Keywords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC0A1F747EDB0003D4F9 /* Keywords.swift */; };
+		700A40C01F774E25003BBBB3 /* Lists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC0C1F74804C0003D4F9 /* Lists.swift */; };
+		700A40C11F774E25003BBBB3 /* Networks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC131F7481940003D4F9 /* Networks.swift */; };
+		700A40C21F774E25003BBBB3 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC151F7481B10003D4F9 /* People.swift */; };
+		700A40C31F774E25003BBBB3 /* Reviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC171F74822E0003D4F9 /* Reviews.swift */; };
+		700A40C41F774E26003BBBB3 /* Searches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC191F7482440003D4F9 /* Searches.swift */; };
+		700A40C51F774E26003BBBB3 /* Timezones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC1B1F7482AE0003D4F9 /* Timezones.swift */; };
+		700A40C61F774E26003BBBB3 /* Companies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DBFC1F747BAE0003D4F9 /* Companies.swift */; };
+		700A40C71F774E26003BBBB3 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DBFE1F747BEE0003D4F9 /* Configuration.swift */; };
+		700A40C81F774E26003BBBB3 /* Credits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC001F747CD50003D4F9 /* Credits.swift */; };
+		700A40C91F774E26003BBBB3 /* Discover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC021F747CF80003D4F9 /* Discover.swift */; };
+		700A40CA1F774E26003BBBB3 /* Find.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC041F747D700003D4F9 /* Find.swift */; };
+		700A40CB1F774E26003BBBB3 /* Genres.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC061F747D950003D4F9 /* Genres.swift */; };
+		700A40CC1F774E26003BBBB3 /* Jobs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC081F747E600003D4F9 /* Jobs.swift */; };
+		700A40CD1F774E26003BBBB3 /* Keywords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC0A1F747EDB0003D4F9 /* Keywords.swift */; };
+		700A40CE1F774E26003BBBB3 /* Lists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC0C1F74804C0003D4F9 /* Lists.swift */; };
+		700A40CF1F774E26003BBBB3 /* Networks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC131F7481940003D4F9 /* Networks.swift */; };
+		700A40D01F774E26003BBBB3 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC151F7481B10003D4F9 /* People.swift */; };
+		700A40D11F774E26003BBBB3 /* Reviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC171F74822E0003D4F9 /* Reviews.swift */; };
+		700A40D21F774E26003BBBB3 /* Searches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC191F7482440003D4F9 /* Searches.swift */; };
+		700A40D31F774E26003BBBB3 /* Timezones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC1B1F7482AE0003D4F9 /* Timezones.swift */; };
+		709F5AAD1F775FEC005B4A96 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709F5AAC1F775FEC005B4A96 /* Types.swift */; };
+		709F5AAE1F77647B005B4A96 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709F5AAC1F775FEC005B4A96 /* Types.swift */; };
+		709F5AAF1F77647C005B4A96 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709F5AAC1F775FEC005B4A96 /* Types.swift */; };
+		709F5AB01F77647C005B4A96 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709F5AAC1F775FEC005B4A96 /* Types.swift */; };
+		709F5AB21F7766C9005B4A96 /* AutoHashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709F5AB11F7766C9005B4A96 /* AutoHashable.swift */; };
+		709F5AB31F77673B005B4A96 /* AutoHashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709F5AB11F7766C9005B4A96 /* AutoHashable.swift */; };
+		709F5AB41F77673B005B4A96 /* AutoHashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709F5AB11F7766C9005B4A96 /* AutoHashable.swift */; };
+		709F5AB51F77673C005B4A96 /* AutoHashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709F5AB11F7766C9005B4A96 /* AutoHashable.swift */; };
 		8933C7851EB5B820000D00A4 /* TMDb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7841EB5B820000D00A4 /* TMDb.swift */; };
 		8933C7861EB5B820000D00A4 /* TMDb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7841EB5B820000D00A4 /* TMDb.swift */; };
 		8933C7871EB5B820000D00A4 /* TMDb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7841EB5B820000D00A4 /* TMDb.swift */; };
@@ -112,6 +164,12 @@
 		52D6D9E21BEFFF6E002C0205 /* TMDbKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TMDbKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D6D9F01BEFFFBE002C0205 /* TMDbKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TMDbKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D6DA0F1BF000BD002C0205 /* TMDbKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TMDbKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		700A40A21F774DCB003BBBB3 /* SimpleLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SimpleLogger.framework; path = Carthage/Build/iOS/SimpleLogger.framework; sourceTree = "<group>"; };
+		700A40A41F774DD3003BBBB3 /* SimpleLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SimpleLogger.framework; path = Carthage/Build/Mac/SimpleLogger.framework; sourceTree = "<group>"; };
+		700A40A61F774DDB003BBBB3 /* SimpleLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SimpleLogger.framework; path = Carthage/Build/watchOS/SimpleLogger.framework; sourceTree = "<group>"; };
+		700A40A81F774DE1003BBBB3 /* SimpleLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SimpleLogger.framework; path = Carthage/Build/tvOS/SimpleLogger.framework; sourceTree = "<group>"; };
+		709F5AAC1F775FEC005B4A96 /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
+		709F5AB11F7766C9005B4A96 /* AutoHashable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoHashable.swift; sourceTree = "<group>"; };
 		8933C7841EB5B820000D00A4 /* TMDb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMDb.swift; sourceTree = "<group>"; };
 		8933C7891EB5B82A000D00A4 /* TMDbTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMDbTests.swift; sourceTree = "<group>"; };
 		AD2FAA261CD0B6D800659CF4 /* TMDb.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TMDb.plist; sourceTree = "<group>"; };
@@ -126,8 +184,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1267DBD91F7474320003D4F9 /* HydraKit.framework in Frameworks */,
-				1267DBDA1F7474320003D4F9 /* KZSimpleLogger.framework in Frameworks */,
 				1267DBDB1F7474320003D4F9 /* Hydra.framework in Frameworks */,
+				700A40A31F774DCB003BBBB3 /* SimpleLogger.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +203,7 @@
 			files = (
 				1267DBEA1F7474710003D4F9 /* Hydra.framework in Frameworks */,
 				1267DBEB1F7474710003D4F9 /* HydraKit.framework in Frameworks */,
+				700A40A71F774DDB003BBBB3 /* SimpleLogger.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +213,7 @@
 			files = (
 				1267DBE51F74745D0003D4F9 /* HydraKit.framework in Frameworks */,
 				1267DBE61F74745D0003D4F9 /* Hydra.framework in Frameworks */,
+				700A40A91F774DE2003BBBB3 /* SimpleLogger.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,7 +223,7 @@
 			files = (
 				1267DBDF1F7474440003D4F9 /* HydraKit.framework in Frameworks */,
 				1267DBE01F7474440003D4F9 /* Hydra.framework in Frameworks */,
-				1267DBE11F7474440003D4F9 /* KZSimpleLogger.framework in Frameworks */,
+				700A40A51F774DD3003BBBB3 /* SimpleLogger.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +249,10 @@
 		1267DBD31F7474320003D4F9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				700A40A21F774DCB003BBBB3 /* SimpleLogger.framework */,
+				700A40A41F774DD3003BBBB3 /* SimpleLogger.framework */,
+				700A40A61F774DDB003BBBB3 /* SimpleLogger.framework */,
+				700A40A81F774DE1003BBBB3 /* SimpleLogger.framework */,
 				1267DBD71F7474320003D4F9 /* Hydra.framework */,
 				1267DBDD1F7474440003D4F9 /* Hydra.framework */,
 				1267DBE31F74745D0003D4F9 /* Hydra.framework */,
@@ -266,6 +330,8 @@
 			children = (
 				1267DBFB1F747B990003D4F9 /* Functions */,
 				8933C7841EB5B820000D00A4 /* TMDb.swift */,
+				709F5AAC1F775FEC005B4A96 /* Types.swift */,
+				709F5AB11F7766C9005B4A96 /* AutoHashable.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -462,16 +528,16 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = TMDb;
 				TargetAttributes = {
 					52D6D97B1BEFF229002C0205 = {
 						CreatedOnToolsVersion = 7.1;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0900;
 					};
 					52D6D9851BEFF229002C0205 = {
 						CreatedOnToolsVersion = 7.1;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0900;
 					};
 					52D6D9E11BEFFF6E002C0205 = {
 						CreatedOnToolsVersion = 7.1;
@@ -577,8 +643,10 @@
 			files = (
 				1267DC0B1F747EDB0003D4F9 /* Keywords.swift in Sources */,
 				1267DC1A1F7482440003D4F9 /* Searches.swift in Sources */,
+				709F5AB21F7766C9005B4A96 /* AutoHashable.swift in Sources */,
 				1267DBF41F747B650003D4F9 /* Collections.swift in Sources */,
 				1267DBFF1F747BEE0003D4F9 /* Configuration.swift in Sources */,
+				709F5AAD1F775FEC005B4A96 /* Types.swift in Sources */,
 				1267DBFD1F747BAE0003D4F9 /* Companies.swift in Sources */,
 				1267DC161F7481B10003D4F9 /* People.swift in Sources */,
 				1267DC141F7481940003D4F9 /* Networks.swift in Sources */,
@@ -608,9 +676,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				700A40BB1F774E25003BBBB3 /* Discover.swift in Sources */,
+				700A40C41F774E26003BBBB3 /* Searches.swift in Sources */,
+				709F5AB41F77673B005B4A96 /* AutoHashable.swift in Sources */,
+				700A40BD1F774E25003BBBB3 /* Genres.swift in Sources */,
+				700A40B91F774E25003BBBB3 /* Configuration.swift in Sources */,
+				709F5AAF1F77647C005B4A96 /* Types.swift in Sources */,
 				1267DBF91F747B940003D4F9 /* Certifications.swift in Sources */,
+				700A40C21F774E25003BBBB3 /* People.swift in Sources */,
+				700A40C11F774E25003BBBB3 /* Networks.swift in Sources */,
+				700A40B81F774E25003BBBB3 /* Companies.swift in Sources */,
+				700A40C01F774E25003BBBB3 /* Lists.swift in Sources */,
+				700A40BE1F774E25003BBBB3 /* Jobs.swift in Sources */,
 				8933C7871EB5B820000D00A4 /* TMDb.swift in Sources */,
 				1267DC111F7481030003D4F9 /* Movies.swift in Sources */,
+				700A40BA1F774E25003BBBB3 /* Credits.swift in Sources */,
+				700A40BF1F774E25003BBBB3 /* Keywords.swift in Sources */,
+				700A40C51F774E26003BBBB3 /* Timezones.swift in Sources */,
+				700A40C31F774E25003BBBB3 /* Reviews.swift in Sources */,
+				700A40BC1F774E25003BBBB3 /* Find.swift in Sources */,
 				1267DBF61F747B680003D4F9 /* Collections.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -619,9 +703,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				700A40C91F774E26003BBBB3 /* Discover.swift in Sources */,
+				700A40D21F774E26003BBBB3 /* Searches.swift in Sources */,
+				709F5AB51F77673C005B4A96 /* AutoHashable.swift in Sources */,
+				700A40CB1F774E26003BBBB3 /* Genres.swift in Sources */,
+				700A40C71F774E26003BBBB3 /* Configuration.swift in Sources */,
+				709F5AB01F77647C005B4A96 /* Types.swift in Sources */,
 				1267DBFA1F747B940003D4F9 /* Certifications.swift in Sources */,
+				700A40D01F774E26003BBBB3 /* People.swift in Sources */,
+				700A40CF1F774E26003BBBB3 /* Networks.swift in Sources */,
+				700A40C61F774E26003BBBB3 /* Companies.swift in Sources */,
+				700A40CE1F774E26003BBBB3 /* Lists.swift in Sources */,
+				700A40CC1F774E26003BBBB3 /* Jobs.swift in Sources */,
 				8933C7881EB5B820000D00A4 /* TMDb.swift in Sources */,
 				1267DC121F7481030003D4F9 /* Movies.swift in Sources */,
+				700A40C81F774E26003BBBB3 /* Credits.swift in Sources */,
+				700A40CD1F774E26003BBBB3 /* Keywords.swift in Sources */,
+				700A40D31F774E26003BBBB3 /* Timezones.swift in Sources */,
+				700A40D11F774E26003BBBB3 /* Reviews.swift in Sources */,
+				700A40CA1F774E26003BBBB3 /* Find.swift in Sources */,
 				1267DBF71F747B680003D4F9 /* Collections.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -630,9 +730,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				700A40AD1F774E25003BBBB3 /* Discover.swift in Sources */,
+				700A40B61F774E25003BBBB3 /* Searches.swift in Sources */,
+				709F5AB31F77673B005B4A96 /* AutoHashable.swift in Sources */,
+				700A40AF1F774E25003BBBB3 /* Genres.swift in Sources */,
+				700A40AB1F774E25003BBBB3 /* Configuration.swift in Sources */,
+				709F5AAE1F77647B005B4A96 /* Types.swift in Sources */,
 				1267DBF81F747B940003D4F9 /* Certifications.swift in Sources */,
+				700A40B41F774E25003BBBB3 /* People.swift in Sources */,
+				700A40B31F774E25003BBBB3 /* Networks.swift in Sources */,
+				700A40AA1F774E25003BBBB3 /* Companies.swift in Sources */,
+				700A40B21F774E25003BBBB3 /* Lists.swift in Sources */,
+				700A40B01F774E25003BBBB3 /* Jobs.swift in Sources */,
 				8933C7861EB5B820000D00A4 /* TMDb.swift in Sources */,
 				1267DC101F7481020003D4F9 /* Movies.swift in Sources */,
+				700A40AC1F774E25003BBBB3 /* Credits.swift in Sources */,
+				700A40B11F774E25003BBBB3 /* Keywords.swift in Sources */,
+				700A40B71F774E25003BBBB3 /* Timezones.swift in Sources */,
+				700A40B51F774E25003BBBB3 /* Reviews.swift in Sources */,
+				700A40AE1F774E25003BBBB3 /* Find.swift in Sources */,
 				1267DBF51F747B670003D4F9 /* Collections.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -682,14 +798,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -733,14 +855,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -792,7 +920,8 @@
 				PRODUCT_NAME = TMDbKit;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -818,7 +947,8 @@
 				PRODUCT_NAME = TMDbKit;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -832,7 +962,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.TMDb.TMDb-iOS-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -846,7 +977,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.TMDb.TMDb-iOS-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
