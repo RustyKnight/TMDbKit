@@ -23,7 +23,7 @@ public protocol MovieSearchResult: Identifiable {
 	var title: String {get}
 	var popularity: Double {get}
 	var posterPath: String {get}
-	var originalLanguage: Lanuage {get}
+	var originalLanguage: Language {get}
 	var originalTitle: String {get}
 	var generes: [Int] {get}
 	var backdropPath: String {get}
@@ -54,7 +54,7 @@ struct CompanySearchResults {
 public extension TMDb {
   
   public func search(for query: String,
-                     language: Lanuage = .english,
+                     language: Language = .english,
                      page: Int = 1,
                      includeAdult: Bool = false,
                      region: String? = nil,

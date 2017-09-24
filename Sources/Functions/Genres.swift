@@ -20,5 +20,5 @@ public protocol Genre {
 
 // This may only be an internal requirement for parsing
 public protocol Genres {
-	var genres: [Genre]
+  var genres: [Genre] {get}
 }
