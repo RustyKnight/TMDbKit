@@ -16,6 +16,8 @@ import Foundation
 // GET /search/person
 // GET /search/tv
 
+// MARK: External API
+
 public protocol PosterPath {
 	var posterPath: String? {get}
 }
@@ -61,11 +63,11 @@ public protocol OriginalLanguage {
 	var originalLanguage: Language {get}
 }
 
-public protocol Adutable {
+public protocol AdultResult {
 	var isAdult: Bool {get}
 }
 
-public protocol OptionalAdutable: Adutable {
+public protocol OptionalAdultResult: AdultResult {
 	var isAdult: Bool? {get}
 }
 
@@ -78,24 +80,17 @@ public protocol MovieSearchResult: MediaSearchResult {
 	var hasVideo: Bool {get}
 }
 
-public protocol OptionalMovieSearchResult: MovieSearchResult, OptionalAdutable {
-	var title: String? {get}
-	var originalTitle: String? {get}
-	var releaseDate: Date? {get}
-	var hasVideo: Bool? {get}
-}
-
 public typealias CollectionSearchResult = Identifiable & BackgroundPath & PosterPath & Namable
 
 public typealias KeywordSearchResult = Identifiable & Namable
 
-public protocol PeopleSearchResult: Identifiable, Popular, Votable, ProfilePath, Namable, Adutable {
-	typealias KnowForMedia = OptionalMovieSearchResult & OptionalTVSearchResult
-	var knownFor: [KnowForMedia] {get}
+public protocol KnownFor {
+	var movies: [MovieSearchResult] {get}
+	var tv: [MovieSearchResult] {get}
 }
 
-public protocol OptionalPeopleSearchResult: PeopleSearchResult {
-	var knownFor: [KnowForMedia]? {get}
+public protocol PeopleSearchResult: Identifiable, Popular, Votable, ProfilePath, Namable, AdultResult {
+	var knownFor: [KnownFor] {get}
 }
 
 public protocol TVSearchResult: MediaSearchResult, Namable {
@@ -104,26 +99,71 @@ public protocol TVSearchResult: MediaSearchResult, Namable {
 	var originalName: String {get}
 }
 
-public protocol OptionalTVSearchResult: TVSearchResult, OptionalNamable {
-	var firstAirDate: Date? {get}
-	var originalCountry: Country? {get}
-	var originalName: String? {get}
+public protocol MultiSearchResults {
+	var movies: [MovieSearchResult] {get}
+	var tv: [TVSearchResult] {get}
+	var people: [PeopleSearchResult] {get}
 }
 
-public enum MediaType: String {
+// MARK: Internal API
+
+// The intention is to use the Swing 4 JSON decoding support, this how ever
+// will require generating a lot of "useless" information depending on what
+// is been retrieved. Instead of exposing that to the caller, the API will
+// make use of the internal API structures to build the information
+// from the raw results, it will then tranform the results more useful
+// strctures based on the type of information which was retrieved, making
+// the process much simpler for external callers
+
+enum MediaType: String {
 	case movie = "movie"
 	case tv = "tv"
 	case person = "person"
 }
 
-public protocol MediaTypeSearchable {
+protocol MediaTypeSearchable {
 	var mediaType: MediaType {get}
+}
+
+protocol OptionalMovieSearchResult: MovieSearchResult, OptionalAdultResult {
+	var title: String? {get}
+	var originalTitle: String? {get}
+	var releaseDate: Date? {get}
+	var hasVideo: Bool? {get}
+}
+
+typealias OptionalKnowForMedia = OptionalMovieSearchResult & OptionalTVSearchResult & MediaTypeSearchable
+
+protocol OptionalPeopleSearchResult: Identifiable, Popular, Votable, ProfilePath, Namable, AdultResult {
+	var knownFor: [OptionalKnowForMedia]? {get}
+}
+
+protocol OptionalTVSearchResult: TVSearchResult, OptionalNamable {
+	var firstAirDate: Date? {get}
+	var originalCountry: Country? {get}
+	var originalName: String? {get}
 }
 
 typealias MultiSearchResult = OptionalMovieSearchResult & OptionalTVSearchResult & OptionalPeopleSearchResult & MediaTypeSearchable
 
+protocol SearchResults {
+	associatedtype SearchResult
+	var searchResults: [SearchResult] {get}
+	var page: Int? {get}
+	var totalPages: Int? {get}
+	var totalResults: Int? {get}
+}
+
+fileprivate enum SearchPath: String, CustomStringConvertible {
+	case movies = "/search/movie"
+	
+	var description: String {
+		return rawValue
+	}
+}
+
 public extension TMDb {
-  
+	
   public func search(forMovie query: String,
                      language: Language = .english + .unitedStatesOfAmerica,
                      page: Int = 1,
@@ -131,7 +171,25 @@ public extension TMDb {
                      region: Country? = nil,
                      year: Int? = nil,
                      primaryReleaseYear: String? = nil) {
-    
+    // Make URL
+		// &api_key
+		// &language
+		// &query
+		// &page
+		// &include_adult
+		// &region
+		// &year
+		// &primary_release_year
+		guard let url = makeURL(version: APIVersion.three, path: SearchPath.movies.description)
+			.with(parameter: Parameters.language, value: language)
+			.with(parameter: Parameters.query, value: query)
+			.with(parameter: Parameters.page, value: page)
+			.with(parameter: Parameters.includeAdult, value: includeAdult)
+			.with(parameter: Parameters.region, value: region)
+			.with(parameter: Parameters.year, value: year)
+			.with(parameter: Parameters.primaryReleaseYear, value: primaryReleaseYear).build() else {
+				return // Throw
+		}
   }
 
 	public func search(forCompanies query: String,

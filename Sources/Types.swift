@@ -31,7 +31,7 @@ english + australia = en-AU
 public struct Language: CustomStringConvertible {
 	public let name: String
 	public let code: String
-	private var country: Country?
+	internal var country: Country?
 	private static var registry: Set<Language> = Set<Language>()
 
 	public init(name: String, code: String, country: Country? = nil, register: Bool = true) {
