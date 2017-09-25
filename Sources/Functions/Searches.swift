@@ -154,6 +154,53 @@ protocol SearchResults {
 	var totalResults: Int? {get}
 }
 
+protocol MovieSearchResults: SearchResults where SearchResult == MovieSearchResult {
+}
+
+struct DefaultMoiveSearchResults: SearchResults, Decodable {
+	typealias SearchResult = DefaultMovieSearchResult
+	
+	enum CodingKeys: String, CodingKey {
+		case page
+		case totalPages = "total_page"
+		case totalResults = "total_results"
+		case searchResults = "results"
+	}
+
+	var page: Int?
+	var totalPages: Int?
+	var totalResults: Int?
+	var searchResults: [DefaultMovieSearchResult]
+}
+
+struct DefaultMovieSearchResult: MovieSearchResult, Decodable {
+	enum CodingKeys: String, CodingKey {
+		case id
+		case backdropPath = "backdrop_path"
+		case genres = "genre_ids"
+		case title
+		case originalTitle = "original_title"
+		case releaseDate = "release_date"
+		case hasVideo = "video"
+		case popularity
+		case posterPath = "poster_path"
+		case voteAverage = "vote_average"
+		case voteCount = "vote_count"
+	}
+	
+	var id: Int
+	var backdropPath: String?
+	var genres: [Int]
+	var title: String
+	var originalTitle: String
+	var releaseDate: Date
+	var hasVideo: Bool
+	var popularity: Double
+	var posterPath: String?
+	var voteAverage: Double
+	var voteCount: Int
+}
+
 fileprivate enum SearchPath: String, CustomStringConvertible {
 	case movies = "/search/movie"
 	
@@ -170,7 +217,7 @@ public extension TMDb {
                      includeAdult: Bool = false,
                      region: Country? = nil,
                      year: Int? = nil,
-                     primaryReleaseYear: String? = nil) {
+                     primaryReleaseYear: String? = nil) throws {
     // Make URL
 		// &api_key
 		// &language
@@ -180,16 +227,14 @@ public extension TMDb {
 		// &region
 		// &year
 		// &primary_release_year
-		guard let url = makeURL(version: APIVersion.three, path: SearchPath.movies.description)
+		let url = try makeURL(version: APIVersion.three, path: SearchPath.movies.description)
 			.with(parameter: Parameters.language, value: language)
 			.with(parameter: Parameters.query, value: query)
 			.with(parameter: Parameters.page, value: page)
 			.with(parameter: Parameters.includeAdult, value: includeAdult)
 			.with(parameter: Parameters.region, value: region)
 			.with(parameter: Parameters.year, value: year)
-			.with(parameter: Parameters.primaryReleaseYear, value: primaryReleaseYear).build() else {
-				return // Throw
-		}
+			.with(parameter: Parameters.primaryReleaseYear, value: primaryReleaseYear).build()
   }
 
 	public func search(forCompanies query: String,

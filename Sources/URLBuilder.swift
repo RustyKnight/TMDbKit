@@ -8,26 +8,43 @@
 
 import Foundation
 
+public enum URLBuilderError: Error {
+	case invalidURL
+}
+
 class URLBuilder {
 	let baseURL: String
 	
 	var parameters: [String: String] = [:]
 	
-	init(baseURL: String) {
+	init(baseURL: String, parameters: [String:String]? = nil) {
 		self.baseURL = baseURL
+		guard let parameters = parameters else {
+			return
+		}
+		for entry in parameters {
+			self.parameters[entry.key] = entry.value
+		}
 	}
 	
-	func build() -> URL? {
+	func copy() -> URLBuilder {
+		return URLBuilder(baseURL: baseURL, parameters: parameters)
+	}
+	
+	func build() throws -> URL {
 		var queryItems: [URLQueryItem] = []
 		for entry in parameters {
 			queryItems.append(URLQueryItem(name: entry.key, value: entry.value))
 		}
 		
 		guard var components = URLComponents(string: baseURL) else {
-			return nil
+			throw URLBuilderError.invalidURL
 		}
 		components.queryItems = queryItems
-		return components.url
+		guard let url = components.url else {
+			throw URLBuilderError.invalidURL
+		}
+		return url
 	}
 	
 	func with(parameter key: String, value: String) -> URLBuilder {

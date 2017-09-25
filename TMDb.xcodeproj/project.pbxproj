@@ -14,6 +14,9 @@
 		123B0B641F787F80002956E5 /* URLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123B0B5C1F787710002956E5 /* URLBuilder.swift */; };
 		123B0B651F787F88002956E5 /* TestURLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123B0B601F787E99002956E5 /* TestURLBuilder.swift */; };
 		123B0B661F787F88002956E5 /* TestURLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123B0B601F787E99002956E5 /* TestURLBuilder.swift */; };
+		123B0B681F7886E8002956E5 /* TestSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123B0B671F7886E8002956E5 /* TestSearch.swift */; };
+		123B0B691F7886EE002956E5 /* TestSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123B0B671F7886E8002956E5 /* TestSearch.swift */; };
+		123B0B6A1F7886EF002956E5 /* TestSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123B0B671F7886E8002956E5 /* TestSearch.swift */; };
 		1267DBD91F7474320003D4F9 /* HydraKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1267DBD51F7474320003D4F9 /* HydraKit.framework */; };
 		1267DBDB1F7474320003D4F9 /* Hydra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1267DBD71F7474320003D4F9 /* Hydra.framework */; };
 		1267DBDF1F7474440003D4F9 /* HydraKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1267DBDC1F7474440003D4F9 /* HydraKit.framework */; };
@@ -48,6 +51,12 @@
 		1267DC181F74822E0003D4F9 /* Reviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC171F74822E0003D4F9 /* Reviews.swift */; };
 		1267DC1A1F7482440003D4F9 /* Searches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC191F7482440003D4F9 /* Searches.swift */; };
 		1267DC1C1F7482AE0003D4F9 /* Timezones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC1B1F7482AE0003D4F9 /* Timezones.swift */; };
+		12F05AE41F7890BA006ADE51 /* TestParsingSearchingResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F05AE31F7890BA006ADE51 /* TestParsingSearchingResults.swift */; };
+		12F05AE51F7890BA006ADE51 /* TestParsingSearchingResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F05AE31F7890BA006ADE51 /* TestParsingSearchingResults.swift */; };
+		12F05AE61F7890BA006ADE51 /* TestParsingSearchingResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F05AE31F7890BA006ADE51 /* TestParsingSearchingResults.swift */; };
+		12F05AE71F789362006ADE51 /* MovieSearchResults.json in Resources */ = {isa = PBXBuildFile; fileRef = 12F05AE11F78906E006ADE51 /* MovieSearchResults.json */; };
+		12F05AE81F789363006ADE51 /* MovieSearchResults.json in Resources */ = {isa = PBXBuildFile; fileRef = 12F05AE11F78906E006ADE51 /* MovieSearchResults.json */; };
+		12F05AE91F789363006ADE51 /* MovieSearchResults.json in Resources */ = {isa = PBXBuildFile; fileRef = 12F05AE11F78906E006ADE51 /* MovieSearchResults.json */; };
 		52D6D9871BEFF229002C0205 /* TMDbKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6D97C1BEFF229002C0205 /* TMDbKit.framework */; };
 		700A40A31F774DCB003BBBB3 /* SimpleLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 700A40A21F774DCB003BBBB3 /* SimpleLogger.framework */; };
 		700A40A51F774DD3003BBBB3 /* SimpleLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 700A40A41F774DD3003BBBB3 /* SimpleLogger.framework */; };
@@ -141,6 +150,7 @@
 /* Begin PBXFileReference section */
 		123B0B5C1F787710002956E5 /* URLBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLBuilder.swift; sourceTree = "<group>"; };
 		123B0B601F787E99002956E5 /* TestURLBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestURLBuilder.swift; sourceTree = "<group>"; };
+		123B0B671F7886E8002956E5 /* TestSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSearch.swift; sourceTree = "<group>"; };
 		1267DBD51F7474320003D4F9 /* HydraKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HydraKit.framework; path = Carthage/Build/iOS/HydraKit.framework; sourceTree = "<group>"; };
 		1267DBD61F7474320003D4F9 /* KZSimpleLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KZSimpleLogger.framework; path = Carthage/Build/iOS/KZSimpleLogger.framework; sourceTree = "<group>"; };
 		1267DBD71F7474320003D4F9 /* Hydra.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Hydra.framework; path = Carthage/Build/iOS/Hydra.framework; sourceTree = "<group>"; };
@@ -168,6 +178,8 @@
 		1267DC171F74822E0003D4F9 /* Reviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reviews.swift; sourceTree = "<group>"; };
 		1267DC191F7482440003D4F9 /* Searches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Searches.swift; sourceTree = "<group>"; };
 		1267DC1B1F7482AE0003D4F9 /* Timezones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timezones.swift; sourceTree = "<group>"; };
+		12F05AE11F78906E006ADE51 /* MovieSearchResults.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MovieSearchResults.json; sourceTree = "<group>"; };
+		12F05AE31F7890BA006ADE51 /* TestParsingSearchingResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestParsingSearchingResults.swift; sourceTree = "<group>"; };
 		52D6D97C1BEFF229002C0205 /* TMDbKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TMDbKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D6D9861BEFF229002C0205 /* TMDb-iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TMDb-iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D6D9E21BEFFF6E002C0205 /* TMDbKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TMDbKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -351,6 +363,9 @@
 			children = (
 				8933C7891EB5B82A000D00A4 /* TMDbTests.swift */,
 				123B0B601F787E99002956E5 /* TestURLBuilder.swift */,
+				123B0B671F7886E8002956E5 /* TestSearch.swift */,
+				12F05AE11F78906E006ADE51 /* MovieSearchResults.json */,
+				12F05AE31F7890BA006ADE51 /* TestParsingSearchingResults.swift */,
 			);
 			name = Tests;
 			path = Tests/TMDbTests;
@@ -608,6 +623,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12F05AE71F789362006ADE51 /* MovieSearchResults.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -636,6 +652,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12F05AE81F789363006ADE51 /* MovieSearchResults.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -643,6 +660,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12F05AE91F789363006ADE51 /* MovieSearchResults.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -682,6 +700,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8933C7901EB5B82D000D00A4 /* TMDbTests.swift in Sources */,
+				123B0B681F7886E8002956E5 /* TestSearch.swift in Sources */,
+				12F05AE41F7890BA006ADE51 /* TestParsingSearchingResults.swift in Sources */,
 				123B0B611F787E99002956E5 /* TestURLBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -775,6 +795,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8933C78F1EB5B82C000D00A4 /* TMDbTests.swift in Sources */,
+				123B0B691F7886EE002956E5 /* TestSearch.swift in Sources */,
+				12F05AE51F7890BA006ADE51 /* TestParsingSearchingResults.swift in Sources */,
 				123B0B651F787F88002956E5 /* TestURLBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -784,6 +806,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8933C78E1EB5B82C000D00A4 /* TMDbTests.swift in Sources */,
+				123B0B6A1F7886EF002956E5 /* TestSearch.swift in Sources */,
+				12F05AE61F7890BA006ADE51 /* TestParsingSearchingResults.swift in Sources */,
 				123B0B661F787F88002956E5 /* TestURLBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

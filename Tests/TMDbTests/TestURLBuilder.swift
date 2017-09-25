@@ -20,22 +20,23 @@ class TestURLBuilder: XCTestCase {
 		// Put teardown code here. This method is called after the invocation of each test method in the class.
 		super.tearDown()
 	}
-
+	
 	func testThatBuilderGeneratesValidURL() {
-		guard let url = URLBuilder(baseURL: "https://api.themoviedb.org/3/search/movie")
-			.with(parameter: "api_key", value: "b8031409dad8c17a516fc3f8468be7ba")
-			.with(parameter: "language", value: "en-AU")
-			.with(parameter: "query", value: "Star Wars")
-			.with(parameter: "page", value: 1)
-			.with(parameter: "include_adult", value: false)
-			.with(parameter: "region", value: Country.australia)
-//			.with(parameter: "year", value: 1974)
-//			.with(parameter: "primary_release_year", value: 1974)
-			.build() else {
-				XCTFail("Failed to generate a valid URL?")
-				return
+		do {
+			let url = try URLBuilder(baseURL: "https://api.themoviedb.org/3/search/movie")
+				.with(parameter: "api_key", value: "b8031409dad8c17a516fc3f8468be7ba")
+				.with(parameter: "language", value: "en-AU")
+				.with(parameter: "query", value: "Star Wars")
+				.with(parameter: "page", value: 1)
+				.with(parameter: "include_adult", value: false)
+				.with(parameter: "region", value: Country.australia)
+				//			.with(parameter: "year", value: 1974)
+				//			.with(parameter: "primary_release_year", value: 1974)
+				.build()
+			print(url)
+		} catch let error {
+			XCTFail("Failed to generate a valid URL? \(error)")
 		}
-		print(url)
 	}
 	
 }
