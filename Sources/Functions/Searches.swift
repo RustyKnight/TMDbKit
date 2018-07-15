@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import Hydra
+import HydraKit
 
 // GET /search/company
 // GET /search/collection
@@ -76,7 +78,7 @@ public typealias MediaSearchResult = Identifiable & BackgroundPath & PosterPath 
 public protocol MovieSearchResult: MediaSearchResult {
 	var title: String {get}
 	var originalTitle: String {get}
-	var releaseDate: Date {get}
+	var releaseDate: Date? {get}
 	var hasVideo: Bool {get}
 }
 
@@ -162,7 +164,7 @@ struct DefaultMoiveSearchResults: SearchResults, Decodable {
 	
 	enum CodingKeys: String, CodingKey {
 		case page
-		case totalPages = "total_page"
+		case totalPages = "total_pages"
 		case totalResults = "total_results"
 		case searchResults = "results"
 	}
@@ -174,15 +176,22 @@ struct DefaultMoiveSearchResults: SearchResults, Decodable {
 }
 
 struct DefaultMovieSearchResult: MovieSearchResult, Decodable {
+	
+	static let dateFormatter: DateFormatter = {
+		let formatter = DateFormatter()
+		formatter.dateFormat = "yyyy-MM-dd"
+		return formatter
+	}()
+	
 	enum CodingKeys: String, CodingKey {
-		case id
+		case id = "id"
 		case backdropPath = "backdrop_path"
 		case genres = "genre_ids"
-		case title
+		case title = "title"
 		case originalTitle = "original_title"
 		case releaseDate = "release_date"
 		case hasVideo = "video"
-		case popularity
+		case popularity = "popularity"
 		case posterPath = "poster_path"
 		case voteAverage = "vote_average"
 		case voteCount = "vote_count"
@@ -190,22 +199,64 @@ struct DefaultMovieSearchResult: MovieSearchResult, Decodable {
 	
 	var id: Int
 	var backdropPath: String?
+	var posterPath: String?
+	var releaseDate: Date?
 	var genres: [Int]
 	var title: String
 	var originalTitle: String
-	var releaseDate: Date
 	var hasVideo: Bool
 	var popularity: Double
-	var posterPath: String?
 	var voteAverage: Double
 	var voteCount: Int
+	
+	init(from decoder: Decoder) throws {
+		let container = try decoder.container(keyedBy: CodingKeys.self)
+		id = try container.decode(Int.self, forKey: .id)
+		
+		if container.contains(.backdropPath) {
+			backdropPath = try container.decodeIfPresent(String.self, forKey: .backdropPath)
+		}
+		if container.contains(.posterPath) {
+			posterPath = try container.decodeIfPresent(String.self, forKey: .posterPath)
+		}
+		title = try container.decode(String.self, forKey: .title)
+		originalTitle = try container.decode(String.self, forKey: .originalTitle)
+		hasVideo = try container.decode(Bool.self, forKey: .hasVideo)
+		popularity = try container.decode(Double.self, forKey: .popularity)
+		voteAverage = try container.decode(Double.self, forKey: .voteAverage)
+		voteCount = try container.decode(Int.self, forKey: .voteCount)
+		genres = try container.decode([Int].self, forKey: .genres)
+		
+		if container.contains(.releaseDate) {
+			let dateString = try container.decode(String.self, forKey: .releaseDate)
+			if let date = DefaultMovieSearchResult.dateFormatter.date(from: dateString) {
+				releaseDate = date
+			} else {
+				releaseDate = nil
+			}
+		} else {
+			releaseDate = nil
+		}
+	}
 }
 
-fileprivate enum SearchPath: String, CustomStringConvertible {
-	case movies = "/search/movie"
-	
-	var description: String {
-		return rawValue
+//fileprivate enum SearchPath: String, CustomStringConvertible {
+//	case movies = "/search/movie"
+//
+//	var description: String {
+//		return rawValue
+//	}
+//}
+
+public extension Commands {
+	struct Search {
+		static let multi = SearchCommand(name: "/search/multi")
+		static let companies = SearchCommand(name: "/search/company")
+		static let collections = SearchCommand(name: "/search/collection")
+		static let keywords = SearchCommand(name: "/search/keyword")
+		static let movies = SearchCommand(name: "/search/movie")
+		static let people = SearchCommand(name: "/search/person")
+		static let tv = SearchCommand(name: "/search/tv")
 	}
 }
 
@@ -214,7 +265,7 @@ public extension TMDb {
   public func search(forMovie query: String,
                      language: Language = .english + .unitedStatesOfAmerica,
                      page: Int = 1,
-                     includeAdult: Bool = false,
+                     includeAdultContent: Bool = false,
                      region: Country? = nil,
                      year: Int? = nil,
                      primaryReleaseYear: String? = nil) throws {
@@ -227,14 +278,16 @@ public extension TMDb {
 		// &region
 		// &year
 		// &primary_release_year
-		let url = try makeURL(version: APIVersion.three, path: SearchPath.movies.description)
-			.with(parameter: Parameters.language, value: language)
-			.with(parameter: Parameters.query, value: query)
-			.with(parameter: Parameters.page, value: page)
-			.with(parameter: Parameters.includeAdult, value: includeAdult)
-			.with(parameter: Parameters.region, value: region)
-			.with(parameter: Parameters.year, value: year)
-			.with(parameter: Parameters.primaryReleaseYear, value: primaryReleaseYear).build()
+		let url = try build(version: APIVersion.three,
+												command: Commands.Search.movies,
+												language: language,
+												includeAdultContent: includeAdultContent,
+												region: region)
+			.with(parameter: QueryParameters.query, value: query)
+			.with(parameter: QueryParameters.page, value: page)
+			.with(parameter: QueryParameters.year, value: year)
+			.with(parameter: QueryParameters.primaryReleaseYear, value: primaryReleaseYear).build()
+		
   }
 
 	public func search(forCompanies query: String,

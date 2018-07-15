@@ -35,6 +35,14 @@ class TestParsingSearchingResults: XCTestCase {
 			formatter.dateFormat = "yyyy-MM-dd"
 			decoder.dateDecodingStrategy = .formatted(formatter)
 			let movieSearchResults = try decoder.decode(DefaultMoiveSearchResults.self, from: data)
+			
+			print("Page \(movieSearchResults.page ?? 0)")
+			print("Total Pages \(movieSearchResults.totalPages ?? 0)")
+			print("Total Results \(movieSearchResults.totalResults ?? 0)")
+
+			for result in movieSearchResults.searchResults {
+				print("\(result.title); \(result.originalTitle); \(result.releaseDate)")
+			}
 		} catch let error {
 			XCTFail("\(error)")
 		}

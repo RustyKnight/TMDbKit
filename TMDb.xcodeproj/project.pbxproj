@@ -112,6 +112,10 @@
 		709F5AB31F77673B005B4A96 /* AutoHashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709F5AB11F7766C9005B4A96 /* AutoHashable.swift */; };
 		709F5AB41F77673B005B4A96 /* AutoHashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709F5AB11F7766C9005B4A96 /* AutoHashable.swift */; };
 		709F5AB51F77673C005B4A96 /* AutoHashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709F5AB11F7766C9005B4A96 /* AutoHashable.swift */; };
+		70C53B0C20FB2312007DDE97 /* URLBuilder+Parameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C53B0B20FB2312007DDE97 /* URLBuilder+Parameter.swift */; };
+		70C53B0D20FB263C007DDE97 /* URLBuilder+Parameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C53B0B20FB2312007DDE97 /* URLBuilder+Parameter.swift */; };
+		70C53B0E20FB263C007DDE97 /* URLBuilder+Parameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C53B0B20FB2312007DDE97 /* URLBuilder+Parameter.swift */; };
+		70C53B0F20FB263C007DDE97 /* URLBuilder+Parameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C53B0B20FB2312007DDE97 /* URLBuilder+Parameter.swift */; };
 		8933C7851EB5B820000D00A4 /* TMDb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7841EB5B820000D00A4 /* TMDb.swift */; };
 		8933C7861EB5B820000D00A4 /* TMDb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7841EB5B820000D00A4 /* TMDb.swift */; };
 		8933C7871EB5B820000D00A4 /* TMDb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7841EB5B820000D00A4 /* TMDb.swift */; };
@@ -191,6 +195,7 @@
 		700A40A81F774DE1003BBBB3 /* SimpleLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SimpleLogger.framework; path = Carthage/Build/tvOS/SimpleLogger.framework; sourceTree = "<group>"; };
 		709F5AAC1F775FEC005B4A96 /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
 		709F5AB11F7766C9005B4A96 /* AutoHashable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoHashable.swift; sourceTree = "<group>"; };
+		70C53B0B20FB2312007DDE97 /* URLBuilder+Parameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLBuilder+Parameter.swift"; sourceTree = "<group>"; };
 		8933C7841EB5B820000D00A4 /* TMDb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMDb.swift; sourceTree = "<group>"; };
 		8933C7891EB5B82A000D00A4 /* TMDbTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMDbTests.swift; sourceTree = "<group>"; };
 		AD2FAA261CD0B6D800659CF4 /* TMDb.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TMDb.plist; sourceTree = "<group>"; };
@@ -354,6 +359,7 @@
 				709F5AAC1F775FEC005B4A96 /* Types.swift */,
 				709F5AB11F7766C9005B4A96 /* AutoHashable.swift */,
 				123B0B5C1F787710002956E5 /* URLBuilder.swift */,
+				70C53B0B20FB2312007DDE97 /* URLBuilder+Parameter.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -554,7 +560,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = TMDb;
 				TargetAttributes = {
 					52D6D97B1BEFF229002C0205 = {
@@ -680,6 +686,7 @@
 				1267DBFD1F747BAE0003D4F9 /* Companies.swift in Sources */,
 				1267DC161F7481B10003D4F9 /* People.swift in Sources */,
 				123B0B5D1F787710002956E5 /* URLBuilder.swift in Sources */,
+				70C53B0C20FB2312007DDE97 /* URLBuilder+Parameter.swift in Sources */,
 				1267DC141F7481940003D4F9 /* Networks.swift in Sources */,
 				1267DBF21F747A680003D4F9 /* Certifications.swift in Sources */,
 				1267DC0D1F74804C0003D4F9 /* Lists.swift in Sources */,
@@ -719,6 +726,7 @@
 				1267DBF91F747B940003D4F9 /* Certifications.swift in Sources */,
 				700A40C21F774E25003BBBB3 /* People.swift in Sources */,
 				123B0B631F787F80002956E5 /* URLBuilder.swift in Sources */,
+				70C53B0E20FB263C007DDE97 /* URLBuilder+Parameter.swift in Sources */,
 				700A40C11F774E25003BBBB3 /* Networks.swift in Sources */,
 				700A40B81F774E25003BBBB3 /* Companies.swift in Sources */,
 				700A40C01F774E25003BBBB3 /* Lists.swift in Sources */,
@@ -747,6 +755,7 @@
 				1267DBFA1F747B940003D4F9 /* Certifications.swift in Sources */,
 				700A40D01F774E26003BBBB3 /* People.swift in Sources */,
 				123B0B641F787F80002956E5 /* URLBuilder.swift in Sources */,
+				70C53B0F20FB263C007DDE97 /* URLBuilder+Parameter.swift in Sources */,
 				700A40CF1F774E26003BBBB3 /* Networks.swift in Sources */,
 				700A40C61F774E26003BBBB3 /* Companies.swift in Sources */,
 				700A40CE1F774E26003BBBB3 /* Lists.swift in Sources */,
@@ -775,6 +784,7 @@
 				1267DBF81F747B940003D4F9 /* Certifications.swift in Sources */,
 				700A40B41F774E25003BBBB3 /* People.swift in Sources */,
 				123B0B621F787F7F002956E5 /* URLBuilder.swift in Sources */,
+				70C53B0D20FB263C007DDE97 /* URLBuilder+Parameter.swift in Sources */,
 				700A40B31F774E25003BBBB3 /* Networks.swift in Sources */,
 				700A40AA1F774E25003BBBB3 /* Companies.swift in Sources */,
 				700A40B21F774E25003BBBB3 /* Lists.swift in Sources */,
@@ -845,12 +855,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -902,12 +914,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
