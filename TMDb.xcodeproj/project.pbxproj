@@ -49,7 +49,7 @@
 		1267DC141F7481940003D4F9 /* Networks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC131F7481940003D4F9 /* Networks.swift */; };
 		1267DC161F7481B10003D4F9 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC151F7481B10003D4F9 /* People.swift */; };
 		1267DC181F74822E0003D4F9 /* Reviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC171F74822E0003D4F9 /* Reviews.swift */; };
-		1267DC1A1F7482440003D4F9 /* Searches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC191F7482440003D4F9 /* Searches.swift */; };
+		1267DC1A1F7482440003D4F9 /* SearcheTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC191F7482440003D4F9 /* SearcheTypes.swift */; };
 		1267DC1C1F7482AE0003D4F9 /* Timezones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC1B1F7482AE0003D4F9 /* Timezones.swift */; };
 		12F05AE41F7890BA006ADE51 /* TestParsingSearchingResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F05AE31F7890BA006ADE51 /* TestParsingSearchingResults.swift */; };
 		12F05AE51F7890BA006ADE51 /* TestParsingSearchingResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F05AE31F7890BA006ADE51 /* TestParsingSearchingResults.swift */; };
@@ -74,7 +74,7 @@
 		700A40B31F774E25003BBBB3 /* Networks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC131F7481940003D4F9 /* Networks.swift */; };
 		700A40B41F774E25003BBBB3 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC151F7481B10003D4F9 /* People.swift */; };
 		700A40B51F774E25003BBBB3 /* Reviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC171F74822E0003D4F9 /* Reviews.swift */; };
-		700A40B61F774E25003BBBB3 /* Searches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC191F7482440003D4F9 /* Searches.swift */; };
+		700A40B61F774E25003BBBB3 /* SearcheTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC191F7482440003D4F9 /* SearcheTypes.swift */; };
 		700A40B71F774E25003BBBB3 /* Timezones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC1B1F7482AE0003D4F9 /* Timezones.swift */; };
 		700A40B81F774E25003BBBB3 /* Companies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DBFC1F747BAE0003D4F9 /* Companies.swift */; };
 		700A40B91F774E25003BBBB3 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DBFE1F747BEE0003D4F9 /* Configuration.swift */; };
@@ -88,7 +88,7 @@
 		700A40C11F774E25003BBBB3 /* Networks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC131F7481940003D4F9 /* Networks.swift */; };
 		700A40C21F774E25003BBBB3 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC151F7481B10003D4F9 /* People.swift */; };
 		700A40C31F774E25003BBBB3 /* Reviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC171F74822E0003D4F9 /* Reviews.swift */; };
-		700A40C41F774E26003BBBB3 /* Searches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC191F7482440003D4F9 /* Searches.swift */; };
+		700A40C41F774E26003BBBB3 /* SearcheTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC191F7482440003D4F9 /* SearcheTypes.swift */; };
 		700A40C51F774E26003BBBB3 /* Timezones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC1B1F7482AE0003D4F9 /* Timezones.swift */; };
 		700A40C61F774E26003BBBB3 /* Companies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DBFC1F747BAE0003D4F9 /* Companies.swift */; };
 		700A40C71F774E26003BBBB3 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DBFE1F747BEE0003D4F9 /* Configuration.swift */; };
@@ -102,8 +102,12 @@
 		700A40CF1F774E26003BBBB3 /* Networks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC131F7481940003D4F9 /* Networks.swift */; };
 		700A40D01F774E26003BBBB3 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC151F7481B10003D4F9 /* People.swift */; };
 		700A40D11F774E26003BBBB3 /* Reviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC171F74822E0003D4F9 /* Reviews.swift */; };
-		700A40D21F774E26003BBBB3 /* Searches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC191F7482440003D4F9 /* Searches.swift */; };
+		700A40D21F774E26003BBBB3 /* SearcheTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC191F7482440003D4F9 /* SearcheTypes.swift */; };
 		700A40D31F774E26003BBBB3 /* Timezones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC1B1F7482AE0003D4F9 /* Timezones.swift */; };
+		707963952107EACA004EC790 /* SearchCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707963942107EACA004EC790 /* SearchCommand.swift */; };
+		707963962107EB9C004EC790 /* SearchCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707963942107EACA004EC790 /* SearchCommand.swift */; };
+		707963972107EB9D004EC790 /* SearchCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707963942107EACA004EC790 /* SearchCommand.swift */; };
+		707963982107EB9D004EC790 /* SearchCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707963942107EACA004EC790 /* SearchCommand.swift */; };
 		709F5AAD1F775FEC005B4A96 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709F5AAC1F775FEC005B4A96 /* Types.swift */; };
 		709F5AAE1F77647B005B4A96 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709F5AAC1F775FEC005B4A96 /* Types.swift */; };
 		709F5AAF1F77647C005B4A96 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709F5AAC1F775FEC005B4A96 /* Types.swift */; };
@@ -180,7 +184,7 @@
 		1267DC131F7481940003D4F9 /* Networks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networks.swift; sourceTree = "<group>"; };
 		1267DC151F7481B10003D4F9 /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
 		1267DC171F74822E0003D4F9 /* Reviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reviews.swift; sourceTree = "<group>"; };
-		1267DC191F7482440003D4F9 /* Searches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Searches.swift; sourceTree = "<group>"; };
+		1267DC191F7482440003D4F9 /* SearcheTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearcheTypes.swift; sourceTree = "<group>"; };
 		1267DC1B1F7482AE0003D4F9 /* Timezones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timezones.swift; sourceTree = "<group>"; };
 		12F05AE11F78906E006ADE51 /* MovieSearchResults.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MovieSearchResults.json; sourceTree = "<group>"; };
 		12F05AE31F7890BA006ADE51 /* TestParsingSearchingResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestParsingSearchingResults.swift; sourceTree = "<group>"; };
@@ -193,6 +197,7 @@
 		700A40A41F774DD3003BBBB3 /* SimpleLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SimpleLogger.framework; path = Carthage/Build/Mac/SimpleLogger.framework; sourceTree = "<group>"; };
 		700A40A61F774DDB003BBBB3 /* SimpleLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SimpleLogger.framework; path = Carthage/Build/watchOS/SimpleLogger.framework; sourceTree = "<group>"; };
 		700A40A81F774DE1003BBBB3 /* SimpleLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SimpleLogger.framework; path = Carthage/Build/tvOS/SimpleLogger.framework; sourceTree = "<group>"; };
+		707963942107EACA004EC790 /* SearchCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCommand.swift; sourceTree = "<group>"; };
 		709F5AAC1F775FEC005B4A96 /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
 		709F5AB11F7766C9005B4A96 /* AutoHashable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoHashable.swift; sourceTree = "<group>"; };
 		70C53B0B20FB2312007DDE97 /* URLBuilder+Parameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLBuilder+Parameter.swift"; sourceTree = "<group>"; };
@@ -311,7 +316,7 @@
 				1267DC131F7481940003D4F9 /* Networks.swift */,
 				1267DC151F7481B10003D4F9 /* People.swift */,
 				1267DC171F74822E0003D4F9 /* Reviews.swift */,
-				1267DC191F7482440003D4F9 /* Searches.swift */,
+				1267DC191F7482440003D4F9 /* SearcheTypes.swift */,
 				1267DC1B1F7482AE0003D4F9 /* Timezones.swift */,
 			);
 			path = Functions;
@@ -351,9 +356,18 @@
 			path = Configs;
 			sourceTree = "<group>";
 		};
+		707963932107EABA004EC790 /* Commands */ = {
+			isa = PBXGroup;
+			children = (
+				707963942107EACA004EC790 /* SearchCommand.swift */,
+			);
+			path = Commands;
+			sourceTree = "<group>";
+		};
 		8933C7811EB5B7E0000D00A4 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				707963932107EABA004EC790 /* Commands */,
 				1267DBFB1F747B990003D4F9 /* Functions */,
 				8933C7841EB5B820000D00A4 /* TMDb.swift */,
 				709F5AAC1F775FEC005B4A96 /* Types.swift */,
@@ -678,7 +692,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1267DC0B1F747EDB0003D4F9 /* Keywords.swift in Sources */,
-				1267DC1A1F7482440003D4F9 /* Searches.swift in Sources */,
+				1267DC1A1F7482440003D4F9 /* SearcheTypes.swift in Sources */,
 				709F5AB21F7766C9005B4A96 /* AutoHashable.swift in Sources */,
 				1267DBF41F747B650003D4F9 /* Collections.swift in Sources */,
 				1267DBFF1F747BEE0003D4F9 /* Configuration.swift in Sources */,
@@ -689,6 +703,7 @@
 				70C53B0C20FB2312007DDE97 /* URLBuilder+Parameter.swift in Sources */,
 				1267DC141F7481940003D4F9 /* Networks.swift in Sources */,
 				1267DBF21F747A680003D4F9 /* Certifications.swift in Sources */,
+				707963952107EACA004EC790 /* SearchCommand.swift in Sources */,
 				1267DC0D1F74804C0003D4F9 /* Lists.swift in Sources */,
 				1267DC011F747CD50003D4F9 /* Credits.swift in Sources */,
 				8933C7851EB5B820000D00A4 /* TMDb.swift in Sources */,
@@ -718,7 +733,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				700A40BB1F774E25003BBBB3 /* Discover.swift in Sources */,
-				700A40C41F774E26003BBBB3 /* Searches.swift in Sources */,
+				700A40C41F774E26003BBBB3 /* SearcheTypes.swift in Sources */,
 				709F5AB41F77673B005B4A96 /* AutoHashable.swift in Sources */,
 				700A40BD1F774E25003BBBB3 /* Genres.swift in Sources */,
 				700A40B91F774E25003BBBB3 /* Configuration.swift in Sources */,
@@ -729,6 +744,7 @@
 				70C53B0E20FB263C007DDE97 /* URLBuilder+Parameter.swift in Sources */,
 				700A40C11F774E25003BBBB3 /* Networks.swift in Sources */,
 				700A40B81F774E25003BBBB3 /* Companies.swift in Sources */,
+				707963972107EB9D004EC790 /* SearchCommand.swift in Sources */,
 				700A40C01F774E25003BBBB3 /* Lists.swift in Sources */,
 				700A40BE1F774E25003BBBB3 /* Jobs.swift in Sources */,
 				8933C7871EB5B820000D00A4 /* TMDb.swift in Sources */,
@@ -747,7 +763,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				700A40C91F774E26003BBBB3 /* Discover.swift in Sources */,
-				700A40D21F774E26003BBBB3 /* Searches.swift in Sources */,
+				700A40D21F774E26003BBBB3 /* SearcheTypes.swift in Sources */,
 				709F5AB51F77673C005B4A96 /* AutoHashable.swift in Sources */,
 				700A40CB1F774E26003BBBB3 /* Genres.swift in Sources */,
 				700A40C71F774E26003BBBB3 /* Configuration.swift in Sources */,
@@ -758,6 +774,7 @@
 				70C53B0F20FB263C007DDE97 /* URLBuilder+Parameter.swift in Sources */,
 				700A40CF1F774E26003BBBB3 /* Networks.swift in Sources */,
 				700A40C61F774E26003BBBB3 /* Companies.swift in Sources */,
+				707963982107EB9D004EC790 /* SearchCommand.swift in Sources */,
 				700A40CE1F774E26003BBBB3 /* Lists.swift in Sources */,
 				700A40CC1F774E26003BBBB3 /* Jobs.swift in Sources */,
 				8933C7881EB5B820000D00A4 /* TMDb.swift in Sources */,
@@ -776,7 +793,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				700A40AD1F774E25003BBBB3 /* Discover.swift in Sources */,
-				700A40B61F774E25003BBBB3 /* Searches.swift in Sources */,
+				700A40B61F774E25003BBBB3 /* SearcheTypes.swift in Sources */,
 				709F5AB31F77673B005B4A96 /* AutoHashable.swift in Sources */,
 				700A40AF1F774E25003BBBB3 /* Genres.swift in Sources */,
 				700A40AB1F774E25003BBBB3 /* Configuration.swift in Sources */,
@@ -787,6 +804,7 @@
 				70C53B0D20FB263C007DDE97 /* URLBuilder+Parameter.swift in Sources */,
 				700A40B31F774E25003BBBB3 /* Networks.swift in Sources */,
 				700A40AA1F774E25003BBBB3 /* Companies.swift in Sources */,
+				707963962107EB9C004EC790 /* SearchCommand.swift in Sources */,
 				700A40B21F774E25003BBBB3 /* Lists.swift in Sources */,
 				700A40B01F774E25003BBBB3 /* Jobs.swift in Sources */,
 				8933C7861EB5B820000D00A4 /* TMDb.swift in Sources */,

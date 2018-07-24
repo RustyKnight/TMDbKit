@@ -116,4 +116,21 @@ class TestSearch: XCTestCase {
 		})
 	}
 	
+	func testMovieSearch() {
+		let exp = expectation(description: "Perform search")
+		TMDb.shared.apiKey = "b8031409dad8c17a516fc3f8468be7ba"
+		TMDb.shared.search(forMovie: "star").then { (results) in
+			print("Found \(results.count) matches")
+			exp.fulfill()
+		}.catch { (error) -> (Void) in
+			XCTFail("\(error)")
+		}
+		waitForExpectations(timeout: 3600.0, handler: { (error) in
+			guard let error = error else {
+				return
+			}
+			XCTFail("\(error)")
+		})
+	}
+	
 }
