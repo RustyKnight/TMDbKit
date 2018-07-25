@@ -106,21 +106,23 @@ class MovieSearcher {
 	func execute() -> Promise<[MovieSearchResult]> {
 		return Promise<URL>(in: .userInitiated) { (fulfill, fail, _) in
 			fulfill(try self.builder.build())
-		}.then { (url) -> Promise<Data> in
+		}.then(in: .userInitiated) { (url) -> Promise<Data> in
 			return URLSessionHelper.shared.get(from: url)
-		}.then { (result) -> DefaultMoiveSearchResults in
+		}.then(in: .userInitiated) { (result) -> DefaultMoiveSearchResults in
 			return try self.parse(result)
 		}.then { (result) -> Promise<[DefaultMoiveSearchResults]> in
-			guard let totalPages = result.totalPages, totalPages > 1 else {
-				return Promise<[DefaultMoiveSearchResults]>(resolved: [result])
-			}
-			var requests: [Promise<DefaultMoiveSearchResults>] = []
-			requests.append(Promise<DefaultMoiveSearchResults>(resolved: result))
-			for page in 2...totalPages {
-				requests.append(self.results(with: self.builder, forPage: page))
-			}
-			
-			return all(requests)
+			return self.downloadPages(basedOn: self.builder, initialPage: result)
+//		}
+//			guard let totalPages = result.totalPages, totalPages > 1 else {
+//				return Promise<[DefaultMoiveSearchResults]>(resolved: [result])
+//			}
+//			var requests: [Promise<DefaultMoiveSearchResults>] = []
+//			requests.append(Promise<DefaultMoiveSearchResults>(resolved: result))
+//			for page in 2...totalPages {
+//				requests.append(self.results(with: self.builder, forPage: page))
+//			}
+//
+//			return all(requests)
 		}.then { (results) -> Promise<[MovieSearchResult]> in
 			var merged: [MovieSearchResult] = []
 			for pagedResult in results {
@@ -129,25 +131,45 @@ class MovieSearcher {
 			return Promise<[MovieSearchResult]>(resolved: merged)
 		}
 	}
-	
+
 	func parse(_ data: Data) throws -> DefaultMoiveSearchResults {
 		let decoder = JSONDecoder()
 		let formatter = DateFormatter()
 		formatter.dateFormat = "yyyy-MM-dd"
 		decoder.dateDecodingStrategy = .formatted(formatter)
+//		print(String(data: data, encoding: .utf8))
 		return try decoder.decode(DefaultMoiveSearchResults.self, from: data)
 	}
 	
-	func results(with builder: URLBuilder, forPage page: Int) -> Promise<DefaultMoiveSearchResults> {
-		return Promise<URLBuilder>(in: .userInitiated) { (fulfill, fail, _) in
-			let copy = builder.copy()
-			fulfill(copy.with(parameter: QueryParameters.page, value: page))
-			}.then({ (builder) -> Promise<Data> in
-				let url = try builder.build()
-				print(url)
-				return URLSessionHelper.shared.get(from: url)
-			}).then({ (result) -> DefaultMoiveSearchResults in
-				return try self.parse(result)
-			})
+//	func results(with builder: URLBuilder, forPage page: Int) -> Promise<DefaultMoiveSearchResults> {
+//		return Promise<URLBuilder>(in: .userInitiated) { (fulfill, fail, _) in
+//			let copy = builder.copy()
+//			fulfill(copy.with(parameter: QueryParameters.page, value: page))
+//		}.then({ (builder) -> Promise<Data> in
+//			return self.download(from: try builder.build())
+//		}).then({ (result) -> DefaultMoiveSearchResults in
+//			return try self.parse(result)
+//		})
+//	}
+	
+	func downloadPages(basedOn builder: URLBuilder, initialPage: DefaultMoiveSearchResults) -> Promise<[DefaultMoiveSearchResults]> {
+		guard let totalPages = initialPage.totalPages, totalPages > 1 else {
+			return Promise<[DefaultMoiveSearchResults]>(resolved: [initialPage])
+		}
+		return Promise<[Data]>() { (fulfill, fail, _) in
+			var requests: [URL] = []
+			for page in 2...totalPages {
+				let copy = builder.copy().with(parameter: QueryParameters.page, value: page)
+				requests.append(try copy.build())
+			}
+			DownloadQueue.shared.download(from: requests, then: fulfill, fail: fail)
+		}.then({ (responses) in
+			var results: [DefaultMoiveSearchResults] = []
+			for response in responses {
+				results.append(try self.parse(response))
+			}
+			
+			return Promise<[DefaultMoiveSearchResults]>(resolved: results)
+		})
 	}
 }

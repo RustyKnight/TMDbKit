@@ -120,6 +120,10 @@
 		70C53B0D20FB263C007DDE97 /* URLBuilder+Parameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C53B0B20FB2312007DDE97 /* URLBuilder+Parameter.swift */; };
 		70C53B0E20FB263C007DDE97 /* URLBuilder+Parameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C53B0B20FB2312007DDE97 /* URLBuilder+Parameter.swift */; };
 		70C53B0F20FB263C007DDE97 /* URLBuilder+Parameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C53B0B20FB2312007DDE97 /* URLBuilder+Parameter.swift */; };
+		70E5BB5321080681001F0A79 /* DownloadOperationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E5BB5221080681001F0A79 /* DownloadOperationQueue.swift */; };
+		70E5BB54210807B1001F0A79 /* DownloadOperationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E5BB5221080681001F0A79 /* DownloadOperationQueue.swift */; };
+		70E5BB55210807B2001F0A79 /* DownloadOperationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E5BB5221080681001F0A79 /* DownloadOperationQueue.swift */; };
+		70E5BB56210807B2001F0A79 /* DownloadOperationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E5BB5221080681001F0A79 /* DownloadOperationQueue.swift */; };
 		8933C7851EB5B820000D00A4 /* TMDb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7841EB5B820000D00A4 /* TMDb.swift */; };
 		8933C7861EB5B820000D00A4 /* TMDb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7841EB5B820000D00A4 /* TMDb.swift */; };
 		8933C7871EB5B820000D00A4 /* TMDb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7841EB5B820000D00A4 /* TMDb.swift */; };
@@ -201,6 +205,7 @@
 		709F5AAC1F775FEC005B4A96 /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
 		709F5AB11F7766C9005B4A96 /* AutoHashable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoHashable.swift; sourceTree = "<group>"; };
 		70C53B0B20FB2312007DDE97 /* URLBuilder+Parameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLBuilder+Parameter.swift"; sourceTree = "<group>"; };
+		70E5BB5221080681001F0A79 /* DownloadOperationQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadOperationQueue.swift; sourceTree = "<group>"; };
 		8933C7841EB5B820000D00A4 /* TMDb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMDb.swift; sourceTree = "<group>"; };
 		8933C7891EB5B82A000D00A4 /* TMDbTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMDbTests.swift; sourceTree = "<group>"; };
 		AD2FAA261CD0B6D800659CF4 /* TMDb.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TMDb.plist; sourceTree = "<group>"; };
@@ -364,9 +369,18 @@
 			path = Commands;
 			sourceTree = "<group>";
 		};
+		70E5BB5121080670001F0A79 /* Queue */ = {
+			isa = PBXGroup;
+			children = (
+				70E5BB5221080681001F0A79 /* DownloadOperationQueue.swift */,
+			);
+			path = Queue;
+			sourceTree = "<group>";
+		};
 		8933C7811EB5B7E0000D00A4 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				70E5BB5121080670001F0A79 /* Queue */,
 				707963932107EABA004EC790 /* Commands */,
 				1267DBFB1F747B990003D4F9 /* Functions */,
 				8933C7841EB5B820000D00A4 /* TMDb.swift */,
@@ -704,6 +718,7 @@
 				1267DC141F7481940003D4F9 /* Networks.swift in Sources */,
 				1267DBF21F747A680003D4F9 /* Certifications.swift in Sources */,
 				707963952107EACA004EC790 /* SearchCommand.swift in Sources */,
+				70E5BB5321080681001F0A79 /* DownloadOperationQueue.swift in Sources */,
 				1267DC0D1F74804C0003D4F9 /* Lists.swift in Sources */,
 				1267DC011F747CD50003D4F9 /* Credits.swift in Sources */,
 				8933C7851EB5B820000D00A4 /* TMDb.swift in Sources */,
@@ -745,6 +760,7 @@
 				700A40C11F774E25003BBBB3 /* Networks.swift in Sources */,
 				700A40B81F774E25003BBBB3 /* Companies.swift in Sources */,
 				707963972107EB9D004EC790 /* SearchCommand.swift in Sources */,
+				70E5BB55210807B2001F0A79 /* DownloadOperationQueue.swift in Sources */,
 				700A40C01F774E25003BBBB3 /* Lists.swift in Sources */,
 				700A40BE1F774E25003BBBB3 /* Jobs.swift in Sources */,
 				8933C7871EB5B820000D00A4 /* TMDb.swift in Sources */,
@@ -775,6 +791,7 @@
 				700A40CF1F774E26003BBBB3 /* Networks.swift in Sources */,
 				700A40C61F774E26003BBBB3 /* Companies.swift in Sources */,
 				707963982107EB9D004EC790 /* SearchCommand.swift in Sources */,
+				70E5BB56210807B2001F0A79 /* DownloadOperationQueue.swift in Sources */,
 				700A40CE1F774E26003BBBB3 /* Lists.swift in Sources */,
 				700A40CC1F774E26003BBBB3 /* Jobs.swift in Sources */,
 				8933C7881EB5B820000D00A4 /* TMDb.swift in Sources */,
@@ -805,6 +822,7 @@
 				700A40B31F774E25003BBBB3 /* Networks.swift in Sources */,
 				700A40AA1F774E25003BBBB3 /* Companies.swift in Sources */,
 				707963962107EB9C004EC790 /* SearchCommand.swift in Sources */,
+				70E5BB54210807B1001F0A79 /* DownloadOperationQueue.swift in Sources */,
 				700A40B21F774E25003BBBB3 /* Lists.swift in Sources */,
 				700A40B01F774E25003BBBB3 /* Jobs.swift in Sources */,
 				8933C7861EB5B820000D00A4 /* TMDb.swift in Sources */,

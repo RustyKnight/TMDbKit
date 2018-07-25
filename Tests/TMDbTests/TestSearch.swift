@@ -58,7 +58,8 @@ class TestSearch: XCTestCase {
 		let decoder = JSONDecoder()
 		let formatter = DateFormatter()
 		formatter.dateFormat = "yyyy-MM-dd"
-		decoder.dateDecodingStrategy = .formatted(formatter)
+		decoder.dateDecodingStrategy = .formatted(formatter)		
+		print(String(data: data, encoding: .utf8))
 		return try decoder.decode(DefaultMoiveSearchResults.self, from: data)
 	}
 	
@@ -116,6 +117,36 @@ class TestSearch: XCTestCase {
 		})
 	}
 	
+	func testPageResults() {
+		let exp = expectation(description: "Perform search")
+		TMDb.shared.apiKey = "b8031409dad8c17a516fc3f8468be7ba"
+		let builder = TMDb.shared.build(command: Commands.Search.movies,
+																		language: .english + .unitedStatesOfAmerica,
+																		region: .australia)
+			.with(parameter: QueryParameters.query, value: "star")
+		.with(parameter: QueryParameters.page, value: 107)
+		async(in: .userInitiated) { () in
+		}.then { () -> Promise<Data> in
+			let url = try builder.build()
+			print(url)
+			return URLSessionHelper.shared.get(from: url)
+		}.then { (result) -> DefaultMoiveSearchResults in
+			return try self.parse(result)
+		}.then { (results) in
+			print("Completed processing \(results.page) pages")
+		}.always {
+			exp.fulfill()
+		}.catch { (error) -> (Void) in
+			print(error)
+		}
+		waitForExpectations(timeout: 3600.0, handler: { (error) in
+			guard let error = error else {
+				return
+			}
+			XCTFail("\(error)")
+		})
+	}
+	
 	func testMovieSearch() {
 		let exp = expectation(description: "Perform search")
 		TMDb.shared.apiKey = "b8031409dad8c17a516fc3f8468be7ba"
@@ -124,6 +155,7 @@ class TestSearch: XCTestCase {
 			exp.fulfill()
 		}.catch { (error) -> (Void) in
 			XCTFail("\(error)")
+			exp.fulfill()
 		}
 		waitForExpectations(timeout: 3600.0, handler: { (error) in
 			guard let error = error else {
