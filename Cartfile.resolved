@@ -1,3 +1,2 @@
-github "RustyKnight/Hydra" "vXcode9.1.1"
-github "RustyKnight/HydraKit" "1fe3490364ae7752a0e1f91dd4705d7c39232420"
-github "RustyKnight/SimpleLogger" "v0.0.6"
+binary "https://kaizen.api.net:8443/json/10.1b10B61/Cadmus" "1.0.4"
+binary "https://kaizen.api.net:8443/json/10.1b10B61/Hydra" "1.2.1"
