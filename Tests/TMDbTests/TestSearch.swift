@@ -9,7 +9,7 @@
 import XCTest
 @testable import TMDbKit
 import Hydra
-import HydraKit
+
 
 class TestSearch: XCTestCase {
 	
@@ -25,7 +25,7 @@ class TestSearch: XCTestCase {
 	
 	func testThatSearchResultsCanBeDownloaded() {
 		let exp = expectation(description: "Perform search")
-		async { () -> URLBuilder in
+    async { (_) -> URLBuilder in
 			let builder = URLBuilder(baseURL: "https://api.themoviedb.org/3/search/movie")
 				.with(parameter: "api_key", value: "b8031409dad8c17a516fc3f8468be7ba")
 				.with(parameter: "language", value: "en-AU")
@@ -83,7 +83,7 @@ class TestSearch: XCTestCase {
 														 language: .english + .unitedStatesOfAmerica,
 														 region: .australia)
 			.with(parameter: QueryParameters.query, value: "star")
-		async(in: .userInitiated) { () in
+    async(in: .userInitiated, token: nil) { (_) in
 		}.then { () -> Promise<Data> in
 			let url = try builder.build()
 			print(url)
@@ -125,7 +125,7 @@ class TestSearch: XCTestCase {
 																		region: .australia)
 			.with(parameter: QueryParameters.query, value: "star")
 		.with(parameter: QueryParameters.page, value: 107)
-		async(in: .userInitiated) { () in
+    async(in: .userInitiated, token: nil) { (_) in
 		}.then { () -> Promise<Data> in
 			let url = try builder.build()
 			print(url)

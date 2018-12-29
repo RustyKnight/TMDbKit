@@ -17,14 +17,10 @@
 		123B0B681F7886E8002956E5 /* TestSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123B0B671F7886E8002956E5 /* TestSearch.swift */; };
 		123B0B691F7886EE002956E5 /* TestSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123B0B671F7886E8002956E5 /* TestSearch.swift */; };
 		123B0B6A1F7886EF002956E5 /* TestSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123B0B671F7886E8002956E5 /* TestSearch.swift */; };
-		1267DBD91F7474320003D4F9 /* HydraKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1267DBD51F7474320003D4F9 /* HydraKit.framework */; };
 		1267DBDB1F7474320003D4F9 /* Hydra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1267DBD71F7474320003D4F9 /* Hydra.framework */; };
-		1267DBDF1F7474440003D4F9 /* HydraKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1267DBDC1F7474440003D4F9 /* HydraKit.framework */; };
 		1267DBE01F7474440003D4F9 /* Hydra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1267DBDD1F7474440003D4F9 /* Hydra.framework */; };
-		1267DBE51F74745D0003D4F9 /* HydraKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1267DBE21F74745D0003D4F9 /* HydraKit.framework */; };
 		1267DBE61F74745D0003D4F9 /* Hydra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1267DBE31F74745D0003D4F9 /* Hydra.framework */; };
 		1267DBEA1F7474710003D4F9 /* Hydra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1267DBE81F7474710003D4F9 /* Hydra.framework */; };
-		1267DBEB1F7474710003D4F9 /* HydraKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1267DBE91F7474710003D4F9 /* HydraKit.framework */; };
 		1267DBF21F747A680003D4F9 /* Certifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DBF11F747A680003D4F9 /* Certifications.swift */; };
 		1267DBF41F747B650003D4F9 /* Collections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DBF31F747B650003D4F9 /* Collections.swift */; };
 		1267DBF51F747B670003D4F9 /* Collections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DBF31F747B650003D4F9 /* Collections.swift */; };
@@ -58,10 +54,6 @@
 		12F05AE81F789363006ADE51 /* MovieSearchResults.json in Resources */ = {isa = PBXBuildFile; fileRef = 12F05AE11F78906E006ADE51 /* MovieSearchResults.json */; };
 		12F05AE91F789363006ADE51 /* MovieSearchResults.json in Resources */ = {isa = PBXBuildFile; fileRef = 12F05AE11F78906E006ADE51 /* MovieSearchResults.json */; };
 		52D6D9871BEFF229002C0205 /* TMDbKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6D97C1BEFF229002C0205 /* TMDbKit.framework */; };
-		700A40A31F774DCB003BBBB3 /* SimpleLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 700A40A21F774DCB003BBBB3 /* SimpleLogger.framework */; };
-		700A40A51F774DD3003BBBB3 /* SimpleLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 700A40A41F774DD3003BBBB3 /* SimpleLogger.framework */; };
-		700A40A71F774DDB003BBBB3 /* SimpleLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 700A40A61F774DDB003BBBB3 /* SimpleLogger.framework */; };
-		700A40A91F774DE2003BBBB3 /* SimpleLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 700A40A81F774DE1003BBBB3 /* SimpleLogger.framework */; };
 		700A40AA1F774E25003BBBB3 /* Companies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DBFC1F747BAE0003D4F9 /* Companies.swift */; };
 		700A40AB1F774E25003BBBB3 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DBFE1F747BEE0003D4F9 /* Configuration.swift */; };
 		700A40AC1F774E25003BBBB3 /* Credits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC001F747CD50003D4F9 /* Credits.swift */; };
@@ -104,6 +96,14 @@
 		700A40D11F774E26003BBBB3 /* Reviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC171F74822E0003D4F9 /* Reviews.swift */; };
 		700A40D21F774E26003BBBB3 /* SearcheTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC191F7482440003D4F9 /* SearcheTypes.swift */; };
 		700A40D31F774E26003BBBB3 /* Timezones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267DC1B1F7482AE0003D4F9 /* Timezones.swift */; };
+		703A804321D836600070E981 /* Cadmus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 703A804221D836600070E981 /* Cadmus.framework */; };
+		703A804521D836690070E981 /* Cadmus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 703A804421D836690070E981 /* Cadmus.framework */; };
+		703A804721D836730070E981 /* Cadmus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 703A804621D836730070E981 /* Cadmus.framework */; };
+		703A804921D8367B0070E981 /* Cadmus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 703A804821D8367B0070E981 /* Cadmus.framework */; };
+		703A804C21D838870070E981 /* URLSessionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703A804B21D838870070E981 /* URLSessionHelper.swift */; };
+		703A804D21D8388A0070E981 /* URLSessionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703A804B21D838870070E981 /* URLSessionHelper.swift */; };
+		703A804E21D8388B0070E981 /* URLSessionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703A804B21D838870070E981 /* URLSessionHelper.swift */; };
+		703A804F21D8388B0070E981 /* URLSessionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703A804B21D838870070E981 /* URLSessionHelper.swift */; };
 		707963952107EACA004EC790 /* SearchCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707963942107EACA004EC790 /* SearchCommand.swift */; };
 		707963962107EB9C004EC790 /* SearchCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707963942107EACA004EC790 /* SearchCommand.swift */; };
 		707963972107EB9D004EC790 /* SearchCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707963942107EACA004EC790 /* SearchCommand.swift */; };
@@ -201,6 +201,11 @@
 		700A40A41F774DD3003BBBB3 /* SimpleLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SimpleLogger.framework; path = Carthage/Build/Mac/SimpleLogger.framework; sourceTree = "<group>"; };
 		700A40A61F774DDB003BBBB3 /* SimpleLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SimpleLogger.framework; path = Carthage/Build/watchOS/SimpleLogger.framework; sourceTree = "<group>"; };
 		700A40A81F774DE1003BBBB3 /* SimpleLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SimpleLogger.framework; path = Carthage/Build/tvOS/SimpleLogger.framework; sourceTree = "<group>"; };
+		703A804221D836600070E981 /* Cadmus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cadmus.framework; path = Carthage/Build/tvOS/Cadmus.framework; sourceTree = "<group>"; };
+		703A804421D836690070E981 /* Cadmus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cadmus.framework; path = Carthage/Build/watchOS/Cadmus.framework; sourceTree = "<group>"; };
+		703A804621D836730070E981 /* Cadmus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cadmus.framework; path = Carthage/Build/Mac/Cadmus.framework; sourceTree = "<group>"; };
+		703A804821D8367B0070E981 /* Cadmus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cadmus.framework; path = Carthage/Build/iOS/Cadmus.framework; sourceTree = "<group>"; };
+		703A804B21D838870070E981 /* URLSessionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHelper.swift; sourceTree = "<group>"; };
 		707963942107EACA004EC790 /* SearchCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCommand.swift; sourceTree = "<group>"; };
 		709F5AAC1F775FEC005B4A96 /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
 		709F5AB11F7766C9005B4A96 /* AutoHashable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoHashable.swift; sourceTree = "<group>"; };
@@ -219,9 +224,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1267DBD91F7474320003D4F9 /* HydraKit.framework in Frameworks */,
 				1267DBDB1F7474320003D4F9 /* Hydra.framework in Frameworks */,
-				700A40A31F774DCB003BBBB3 /* SimpleLogger.framework in Frameworks */,
+				703A804921D8367B0070E981 /* Cadmus.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,8 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1267DBEA1F7474710003D4F9 /* Hydra.framework in Frameworks */,
-				1267DBEB1F7474710003D4F9 /* HydraKit.framework in Frameworks */,
-				700A40A71F774DDB003BBBB3 /* SimpleLogger.framework in Frameworks */,
+				703A804521D836690070E981 /* Cadmus.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,9 +250,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1267DBE51F74745D0003D4F9 /* HydraKit.framework in Frameworks */,
 				1267DBE61F74745D0003D4F9 /* Hydra.framework in Frameworks */,
-				700A40A91F774DE2003BBBB3 /* SimpleLogger.framework in Frameworks */,
+				703A804321D836600070E981 /* Cadmus.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,9 +259,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1267DBDF1F7474440003D4F9 /* HydraKit.framework in Frameworks */,
 				1267DBE01F7474440003D4F9 /* Hydra.framework in Frameworks */,
-				700A40A51F774DD3003BBBB3 /* SimpleLogger.framework in Frameworks */,
+				703A804721D836730070E981 /* Cadmus.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +286,10 @@
 		1267DBD31F7474320003D4F9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				703A804221D836600070E981 /* Cadmus.framework */,
+				703A804421D836690070E981 /* Cadmus.framework */,
+				703A804621D836730070E981 /* Cadmus.framework */,
+				703A804821D8367B0070E981 /* Cadmus.framework */,
 				700A40A21F774DCB003BBBB3 /* SimpleLogger.framework */,
 				700A40A41F774DD3003BBBB3 /* SimpleLogger.framework */,
 				700A40A61F774DDB003BBBB3 /* SimpleLogger.framework */,
@@ -361,6 +366,14 @@
 			path = Configs;
 			sourceTree = "<group>";
 		};
+		703A804A21D8386C0070E981 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				703A804B21D838870070E981 /* URLSessionHelper.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		707963932107EABA004EC790 /* Commands */ = {
 			isa = PBXGroup;
 			children = (
@@ -380,6 +393,7 @@
 		8933C7811EB5B7E0000D00A4 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				703A804A21D8386C0070E981 /* Classes */,
 				70E5BB5121080670001F0A79 /* Queue */,
 				707963932107EABA004EC790 /* Commands */,
 				1267DBFB1F747B990003D4F9 /* Functions */,
@@ -718,6 +732,7 @@
 				1267DC141F7481940003D4F9 /* Networks.swift in Sources */,
 				1267DBF21F747A680003D4F9 /* Certifications.swift in Sources */,
 				707963952107EACA004EC790 /* SearchCommand.swift in Sources */,
+				703A804C21D838870070E981 /* URLSessionHelper.swift in Sources */,
 				70E5BB5321080681001F0A79 /* DownloadOperationQueue.swift in Sources */,
 				1267DC0D1F74804C0003D4F9 /* Lists.swift in Sources */,
 				1267DC011F747CD50003D4F9 /* Credits.swift in Sources */,
@@ -760,6 +775,7 @@
 				700A40C11F774E25003BBBB3 /* Networks.swift in Sources */,
 				700A40B81F774E25003BBBB3 /* Companies.swift in Sources */,
 				707963972107EB9D004EC790 /* SearchCommand.swift in Sources */,
+				703A804E21D8388B0070E981 /* URLSessionHelper.swift in Sources */,
 				70E5BB55210807B2001F0A79 /* DownloadOperationQueue.swift in Sources */,
 				700A40C01F774E25003BBBB3 /* Lists.swift in Sources */,
 				700A40BE1F774E25003BBBB3 /* Jobs.swift in Sources */,
@@ -791,6 +807,7 @@
 				700A40CF1F774E26003BBBB3 /* Networks.swift in Sources */,
 				700A40C61F774E26003BBBB3 /* Companies.swift in Sources */,
 				707963982107EB9D004EC790 /* SearchCommand.swift in Sources */,
+				703A804F21D8388B0070E981 /* URLSessionHelper.swift in Sources */,
 				70E5BB56210807B2001F0A79 /* DownloadOperationQueue.swift in Sources */,
 				700A40CE1F774E26003BBBB3 /* Lists.swift in Sources */,
 				700A40CC1F774E26003BBBB3 /* Jobs.swift in Sources */,
@@ -822,6 +839,7 @@
 				700A40B31F774E25003BBBB3 /* Networks.swift in Sources */,
 				700A40AA1F774E25003BBBB3 /* Companies.swift in Sources */,
 				707963962107EB9C004EC790 /* SearchCommand.swift in Sources */,
+				703A804D21D8388A0070E981 /* URLSessionHelper.swift in Sources */,
 				70E5BB54210807B1001F0A79 /* DownloadOperationQueue.swift in Sources */,
 				700A40B21F774E25003BBBB3 /* Lists.swift in Sources */,
 				700A40B01F774E25003BBBB3 /* Jobs.swift in Sources */,
@@ -926,7 +944,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -979,7 +998,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 3.0;
@@ -993,7 +1013,7 @@
 		52D6D9911BEFF229002C0205 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
@@ -1006,7 +1026,7 @@
 				);
 				INFOPLIST_FILE = Configs/TMDb.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/Carthage/Build/iOS";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.TMDb.TMDb-iOS";
@@ -1021,7 +1041,7 @@
 		52D6D9921BEFF229002C0205 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
@@ -1034,7 +1054,7 @@
 				);
 				INFOPLIST_FILE = Configs/TMDb.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/Carthage/Build/iOS";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.TMDb.TMDb-iOS";
 				PRODUCT_NAME = TMDbKit;
@@ -1152,7 +1172,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
+				TVOS_DEPLOYMENT_TARGET = 11.0;
 			};
 			name = Debug;
 		};
@@ -1179,7 +1199,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
+				TVOS_DEPLOYMENT_TARGET = 11.0;
 			};
 			name = Release;
 		};

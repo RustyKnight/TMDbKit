@@ -7,8 +7,9 @@
 //
 
 import Foundation
-import HydraKit
+
 import Hydra
+import Cadmus
 
 public extension Commands {
 	struct Search {
@@ -107,8 +108,10 @@ class MovieSearcher {
 		return Promise<URL>(in: .userInitiated) { (fulfill, fail, _) in
 			fulfill(try self.builder.build())
 		}.then(in: .userInitiated) { (url) -> Promise<Data> in
+      log(debug: "Search url = \(url)")
 			return URLSessionHelper.shared.get(from: url)
 		}.then(in: .userInitiated) { (result) -> DefaultMoiveSearchResults in
+      log(debug: "\(String(data: result, encoding: .utf8))")
 			return try self.parse(result)
 		}.then { (result) -> Promise<[DefaultMoiveSearchResults]> in
 			return self.downloadPages(basedOn: self.builder, initialPage: result)

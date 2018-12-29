@@ -8,7 +8,7 @@
 
 import Foundation
 import Hydra
-import HydraKit
+
 
 // GET /search/company
 // GET /search/collection
